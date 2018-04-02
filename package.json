@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "autoprefixer": "7.1.6",
+    "babel-cli": "^6.26.0",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
@@ -47,9 +48,7 @@
   "scripts": {
     "prestart": "npm run gen:docs",
     "start": "npm-run-all --parallel start:docs gen:docs-watch",
-    "start:docs": "node scripts/start.js",
-    "gen:docs": "node scripts/generateComponentData.js",
-    "gen:docs-watch": "npm run gen:docs -- --watch",
+    "build:commonjs": "cross-env NODE_ENV=production babel ./src --out-dir ./dist --ignore spec.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },
@@ -97,6 +96,7 @@
   },
   "devDependencies": {
     "chokidar": "^2.0.3",
+    "cross-env": "^5.1.4",
     "npm-run-all": "^4.1.2",
     "prop-types": "^15.6.1",
     "react-docgen": "^2.20.1"
