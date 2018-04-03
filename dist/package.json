@@ -1,6 +1,6 @@
 {
   "name": "react-context-connect",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Sagiv Ben-giat",
   "license": "MIT",
   "description": "A connect function for the react context",
