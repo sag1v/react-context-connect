@@ -1,3 +1,5 @@
+import React from 'react';
+
 /**
  * An high-order function to map and pass the context data as a regular props down to it's child.
  * @param {The relevant context consumer instance} ContextConsumber 
