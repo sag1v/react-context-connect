@@ -1,4 +1,14 @@
-import React from 'react';
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
  * An high-order function to map and pass the context data as a regular props down to it's child.
@@ -11,15 +21,15 @@ var connectContext = function connectContext(ContextConsumber) {
     };
     return function (Child) {
         return function (props) {
-            return React.createElement(
+            return _react2.default.createElement(
                 ContextConsumber,
                 null,
                 function (data) {
-                    return React.createElement(Child, Object.assign({}, mapContextToProps(data), props));
+                    return _react2.default.createElement(Child, Object.assign({}, mapContextToProps(data), props));
                 }
             );
         };
     };
 };
 
-export default connectContext;
+exports.default = connectContext;
