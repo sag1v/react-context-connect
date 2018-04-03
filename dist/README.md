@@ -10,7 +10,7 @@ npm install react-context-connect
 ```
 import React from "react";
 import { render } from "react-dom";
-import connectcontext from 'react-context-connect';
+import connectContext from 'react-context-connect';
 
 const resourceContext = React.createContext(); // creating a context
 
